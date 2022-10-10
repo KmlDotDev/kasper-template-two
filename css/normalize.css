@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url(../Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "OpenSans", sans-serif;
+  line-height: 1.9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #00f;
+}
+
+.row {
+  display: flex;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+/*     Breakpoints RWD*/
+/*          --wide-m: 549px;
+            --wide-l: 550px;
+            --wide-xl: 688px;
+            --wide-xxl: 992px;
+            --wide-xxxl: 1312px; */
+/* --------------------- */
