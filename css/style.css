@@ -337,7 +337,7 @@ Services Section Tree:
   font-size: 3.5rem;
   font-weight: 700;
 }
-#services article .srvs:not(:first-of-type) .icon span {
+#services article .s01 ~ div .icon span {
   font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
   color: #000;
   font-size: 3.5rem;
