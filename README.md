@@ -8,7 +8,7 @@ HTML&amp;CSS The second template challenge
 |Header|**Done**|
 |Cover Page| **Done**|
 |Services| **Done**|
-|Design | undone|
+|Design | **Done**|
 |Video |undone|
 |About |undone| 
 |Stats |undone| 
