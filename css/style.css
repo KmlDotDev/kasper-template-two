@@ -241,6 +241,10 @@ header nav .links .search-icon {
 }
 
 @media screen and (max-height: 500px) and (orientation: landscape) {
+  header nav .links ul li:first-of-type a::before,
+header nav .links ul li:not(first-of-type) a:hover::before {
+  bottom: -1px;
+}
   header .container,
   header nav .links ul li a {
     height: 70px;
