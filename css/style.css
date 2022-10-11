@@ -113,7 +113,8 @@ header nav .links ul {
 }
 
 header nav .links ul li a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   color: #fff;
   text-transform: capitalize;
   font-size: 1rem;
@@ -132,7 +133,7 @@ header nav .links ul li:not(first-of-type) a:hover::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 5px;
+  bottom: 0;
   height: 1px;
   width: 100%;
   background-color: var(--main-color);
@@ -149,7 +150,9 @@ header nav .links ul li:not(first-of-type) a:hover::before {
     background-color: transparent;
   }
   header nav .links ul li a {
-    padding: 40px 8px;
+    padding-inline: 10px;
+    padding-block: 0;
+    height: 100px;
   }
 }
 
@@ -238,9 +241,13 @@ header nav .links .search-icon {
 }
 
 @media screen and (max-height: 500px) and (orientation: landscape) {
+  header .container,
+  header nav .links ul li a {
+    height: 70px;
+  }
   #page-cover .content h2 {
     font-size: 1.25rem;
-    margin-block: 1rem;
+    margin-block: .8rem .2rem;
   }
   #page-cover .content p {
     margin-bottom: 1rem;
@@ -328,8 +335,6 @@ Services Section Tree:
 }
 #services article .srvs:not(:first-of-type) .icon span {
   font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
-  -webkit-font-feature-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
-  -moz-font-feature-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
   color: #000;
   font-size: 3.5rem;
 }
@@ -341,18 +346,17 @@ Services Section Tree:
 #services article .text p {
   text-align: center;
   color: #666;
-
 }
 
 @media (min-width: 688px) {
-  #services article .srvs{
+  #services article .srvs {
     text-align: left;
     gap: 30px;
   }
   #services article .srvs .icon {
     align-self: flex-start;
   }
-  #services article .srvs { 
+  #services article .srvs {
     flex-direction: row;
   }
   #services article .text p {
@@ -367,7 +371,7 @@ Services Section Tree:
     grid-template-rows: 1fr 1fr;
   }
   #services article .srvs::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 50px;
     width: 50px;
@@ -377,13 +381,13 @@ Services Section Tree:
     bottom: 0;
   }
   #services article .srvs::after {
-    content: '';
+    content: "";
     position: absolute;
     height: 50px;
     width: 50px;
     border-top: 3px solid var(--main-color);
     border-right: 3px solid var(--main-color);
     right: 0;
-    top: 0
+    top: 0;
   }
 }
