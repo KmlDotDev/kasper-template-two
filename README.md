@@ -9,6 +9,7 @@ HTML&amp;CSS The second template challenge
 |Cover Page| **Done**|
 |Services| **Done**|
 |Design | **Done**|
+|Portfolio| **Done** |
 |Video |undone|
 |About |undone| 
 |Stats |undone| 
