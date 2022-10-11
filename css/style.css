@@ -4,18 +4,28 @@
   --main-color: #19c8fa;
   --transparent-color: rgb(15 116 143 / 70%);
   --page-cover-blurClr: rgb(0 0 0 / 0.5);
-  --section-padding: 100px;
+  --section-padding: 5rem;
+  --content-mt: 4rem;
 }
 
 i {
   font-size: 5rem;
 }
 
+.btn {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #fff;
+}
+
 .material-symbols-outlined {
   font-size: 2rem;
   color: #fff;
   font-weight: 300;
-  cursor: pointer;
+  cursor: default;
 }
 
 .container {
@@ -242,16 +252,16 @@ header nav .links .search-icon {
 
 @media screen and (max-height: 500px) and (orientation: landscape) {
   header nav .links ul li:first-of-type a::before,
-header nav .links ul li:not(first-of-type) a:hover::before {
-  bottom: -1px;
-}
+  header nav .links ul li:not(first-of-type) a:hover::before {
+    bottom: -1px;
+  }
   header .container,
   header nav .links ul li a {
     height: 70px;
   }
   #page-cover .content h2 {
     font-size: 1.25rem;
-    margin-block: .8rem .2rem;
+    margin-block: 0.8rem 0.2rem;
   }
   #page-cover .content p {
     margin-bottom: 1rem;
@@ -312,11 +322,11 @@ Services Section Tree:
 */
 
 #services .container {
-  padding-block: 4rem;
+  padding-block: var(--section-padding);
 }
 
 #services article {
-  margin-top: 4rem;
+  margin-top: var(--content-mt);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
@@ -392,4 +402,146 @@ Services Section Tree:
     right: 0;
     top: 0;
   }
+}
+
+/* Section Our Design */
+
+#our-design {
+  position: relative;
+  overflow: hidden;
+  background: url(../imgs/design-features.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+}
+#our-design img {
+  position: absolute;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #our-design img {
+    display: block;
+    bottom: -60px;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+  #our-design .content {
+    max-width: 50%;
+    margin-left: auto;
+  }
+}
+
+#our-design .content {
+  width: 100%;
+  background-color: var(--transparent-color);
+  color: #fff;
+  padding-left: 3rem;
+}
+
+#our-design .content h3 {
+  text-transform: uppercase;
+  font-size: 1.45rem;
+  font-weight: 500;
+  padding-block: 2rem;
+}
+
+#our-design .content ul {
+  padding-block-end: 2rem;
+}
+#our-design .content ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+#our-design .content ul li:not(:last-of-type) {
+  margin-block-end: 1rem;
+}
+#our-design .content ul li span:last-of-type {
+  text-transform: capitalize;
+}
+/* Portfolio */
+#portfolio  .container {
+  width: 100%;
+  padding-block: var(--section-padding);
+}
+#portfolio  .content {
+  margin-top: var(--content-mt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+#portfolio .content .scroll-btn .btn {
+  text-transform: capitalize;
+}
+#portfolio .content .scroll-btn .btn:first-of-type {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+#portfolio .content .grid-imgs {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+}
+
+@media (min-width: 688px) {
+  #portfolio .content .grid-imgs { 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1312px) {
+  #portfolio .content .grid-imgs { 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+#portfolio .content .grid-imgs .pic {
+  position: relative;
+  overflow: hidden;
+}
+#portfolio .content .grid-imgs .pic img {
+  display: block;
+  max-width: 100%;
+  transition: .4s transform;
+}
+
+#portfolio .content .grid-imgs .pic:hover img {
+  transform: scale(1.2) rotate(8deg);
+}
+
+#portfolio .content .grid-imgs .pic .desc {
+  position: absolute;
+  padding-block: 10px;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  transition: .4s transform;
+}
+
+#portfolio .content .grid-imgs .pic:hover .desc {
+  transform: translateY(-100%);
+}
+#portfolio .content .grid-imgs .pic .desc p {
+  text-transform: capitalize;
+  padding-left: 1rem;
+}
+#portfolio .container .grid-imgs .desc p:last-of-type {
+  color: var(--main-color);
+}
+
+#portfolio .content .scroll-down .btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: .9rem;
 }
