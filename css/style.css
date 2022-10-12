@@ -70,6 +70,7 @@ i {
 
 .special-heading p {
   color: #666;
+  padding-inline: 1rem;
 }
 
 /* Global End */
@@ -463,11 +464,11 @@ Services Section Tree:
   text-transform: capitalize;
 }
 /* Portfolio */
-#portfolio  .container {
+#portfolio .container {
   width: 100%;
   padding-block: var(--section-padding);
 }
-#portfolio  .content {
+#portfolio .content {
   margin-top: var(--content-mt);
   display: flex;
   flex-direction: column;
@@ -490,14 +491,14 @@ Services Section Tree:
 }
 
 @media (min-width: 688px) {
-  #portfolio .content .grid-imgs { 
+  #portfolio .content .grid-imgs {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
 }
 
 @media (min-width: 1312px) {
-  #portfolio .content .grid-imgs { 
+  #portfolio .content .grid-imgs {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
@@ -510,7 +511,7 @@ Services Section Tree:
 #portfolio .content .grid-imgs .pic img {
   display: block;
   max-width: 100%;
-  transition: .4s transform;
+  transition: 0.4s transform;
 }
 
 #portfolio .content .grid-imgs .pic:hover img {
@@ -524,7 +525,7 @@ Services Section Tree:
   width: 100%;
   left: 0;
   top: 100%;
-  transition: .4s transform;
+  transition: 0.4s transform;
 }
 
 #portfolio .content .grid-imgs .pic:hover .desc {
@@ -543,5 +544,172 @@ Services Section Tree:
   text-transform: uppercase;
   background-color: var(--main-color);
   color: #fff;
-  padding: .9rem;
+  padding: 0.9rem;
+}
+
+/* Video Section Tree:
+#video
+  video
+  .content 
+    h3
+    p
+    button.btn
+*/
+
+#video {
+  position: relative;
+}
+
+#video::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0 0 0 / 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#video video {
+  display: block;
+  max-width: 100%;
+}
+
+#video .content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: var(--transparent-color);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+#video .content h3 {
+  margin-block: 2rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#video .content p {
+  text-transform: capitalize;
+  font-size: 1.15rem;
+}
+
+#video .content .btn {
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  padding: 13px 16px;
+  margin-block: 1rem 2rem;
+}
+
+@media (min-width: 992px) {
+  #video .content {
+    padding-top: 4rem;
+  }
+
+  #video .content .btn {
+    margin-top: 4rem;
+  }
+}
+
+/* About Us Section Tree 
+
+    #about
+      .container
+        picture 
+        .content
+            img
+          .grid
+            div
+              span.material-symbols-outlined
+              span
+              span
+*/ 
+
+#about .container {
+  padding-block: var(--section-padding);
+  width: 100%;
+  position: relative;
+}
+
+#about picture img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 30%);
+}
+
+#about .content {
+  position: relative;
+  background: url(../imgs/stats.png) no-repeat;
+  background-size: cover;
+  padding: var(--section-padding) 2rem;
+  z-index: 1;
+}
+
+#about .content::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 0.6);
+  z-index: -1;
+}
+
+#about .content .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  background-color: var(--transparent-color);
+}
+
+#about .content .grid div {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 3rem;
+}
+#about .content .grid div span:first-of-type {
+  height: 45px;
+  width: 45px;
+  background-color: #000;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+#about .content .grid div span:nth-child(2) {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+#about .content .grid div span:last-child {
+  text-transform: capitalize;
+}
+
+
+@media (min-width: 992px) {
+  #about .content .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1312px) {
+  #about .content {
+    padding: var(--section-padding);
+  }
+  #about .content .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
 }
