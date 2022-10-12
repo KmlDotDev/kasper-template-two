@@ -10,8 +10,8 @@ HTML&amp;CSS The second template challenge
 |Services| **Done**|
 |Design | **Done**|
 |Portfolio| **Done** |
-|Video |undone|
-|About |undone| 
+|Video | **Done** |
+|About | **done** | 
 |Stats |undone| 
 |Our-skills |undone| 
 |Quote |undone|
