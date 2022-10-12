@@ -11,8 +11,8 @@ HTML&amp;CSS The second template challenge
 |Design | **Done**|
 |Portfolio| **Done** |
 |Video | **Done** |
-|About | **done** | 
-|Stats |undone| 
+|About | **Done** | 
+|Stats | **Done** | 
 |Our-skills |undone| 
 |Quote |undone|
 |Pricing |undone| 
