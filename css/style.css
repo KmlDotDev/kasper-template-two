@@ -628,7 +628,7 @@ Services Section Tree:
               span.material-symbols-outlined
               span
               span
-*/ 
+*/
 
 #about .container {
   padding-block: var(--section-padding);
@@ -653,7 +653,7 @@ Services Section Tree:
 }
 
 #about .content::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -696,7 +696,6 @@ Services Section Tree:
   text-transform: capitalize;
 }
 
-
 @media (min-width: 992px) {
   #about .content .grid {
     grid-template-columns: 1fr 1fr;
@@ -712,4 +711,175 @@ Services Section Tree:
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
   }
+}
+
+/* Our Skills Tree 
+#our-skills
+  .container
+    .testimonials
+      .special-heading-2
+          h3
+          p
+      .users-tts
+        .user
+          .user-img
+            img
+              
+          .user-desc
+            p
+            p
+      .scrollX
+        span*3
+    .skills
+      .special-heading-2
+        h3
+        p
+    .users-skills
+      .skill-1
+        h4
+        .progress
+          span data-progress="90%">
+
+*/
+
+#our-skills .container {
+  padding-block: var(--section-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 992px) {
+  #our-skills .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+#our-skills .special-heading-2 {
+  text-align: center;
+}
+
+#our-skills .special-heading-2 h3 {
+  text-transform: uppercase;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+#our-skills .special-heading-2 p {
+  color: #666;
+}
+#our-skills .testimonials .users-tts {
+  padding-block: 2rem;
+}
+#our-skills .testimonials .users-tts .user {
+  display: flex;
+  column-gap: 30px;
+  margin-block: 2rem;
+}
+
+#our-skills .testimonials .users-tts .user .user-img img {
+  display: block;
+  max-width: 100%;
+  min-width: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+#our-skills .testimonials .users-tts .user .user-desc {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+}
+
+#our-skills .testimonials .users-tts .user .user-desc p:last-of-type {
+  align-self: flex-end;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+#our-skills .testimonials .scrollX {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+#our-skills .testimonials .scrollX span {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 1px solid #777;
+}
+
+#our-skills .testimonials .scrollX span:nth-child(2) {
+  background-color: var(--main-color);
+  border: 0;
+}
+
+#our-skills .skills .users-skills {
+  padding-block: 2rem;
+}
+
+#our-skills .skills .users-skills > div {
+  margin-block: 1rem;
+}
+#our-skills .skills .users-skills div h4 {
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+#our-skills .skills .users-skills div .progress {
+  margin-top: 0.5rem;
+  height: 30px;
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 1px;
+}
+
+#our-skills .skills .users-skills div .progress span {
+  position: relative;
+  display: block;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+#our-skills .skills .users-skills div .progress span::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
+  border-color: transparent;
+  border-top-color: #000;
+  right: -7px;
+  top: -15px;
+}
+
+#our-skills .skills .users-skills div .progress span::after {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 3px;
+  left: 100%;
+  bottom: 100%;
+  transform: translate(calc(-50% + -1px), -15px);
+}
+
+#our-skills .skills .users-skills .skill-1 .progress span {
+  width: 90%;
+}
+
+#our-skills .skills .users-skills .skill-2 .progress span {
+  width: 85%;
+}
+
+#our-skills .skills .users-skills .skill-3 .progress span {
+  width: 80%;
+}
+
+#our-skills .skills .users-skills .skill-4 .progress span {
+  width: 90%;
 }
