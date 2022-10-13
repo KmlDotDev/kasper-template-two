@@ -14,8 +14,8 @@ HTML&amp;CSS The second template challenge
 |About | **Done** | 
 |Stats | **Done** | 
 |Our-skills | **Done** | 
-|Quote |undone|
-|Pricing |undone| 
-|Subscribe |undone| 
+|Quote | **Done** |
+|Pricing | **Done** | 
+|Subscribe | **Done**| 
 |Contact |undone|
 |Footer |undone|
