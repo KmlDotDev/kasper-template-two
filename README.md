@@ -13,7 +13,7 @@ HTML&amp;CSS The second template challenge
 |Video | **Done** |
 |About | **Done** | 
 |Stats | **Done** | 
-|Our-skills |undone| 
+|Our-skills | **Done** | 
 |Quote |undone|
 |Pricing |undone| 
 |Subscribe |undone| 
