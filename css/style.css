@@ -77,43 +77,43 @@ i {
 
 /* ---------------------- */
 
-header {
+.page-header {
   position: absolute;
   z-index: 10;
   top: 0;
   left: 0;
   right: 0;
 }
-header nav {
+.page-header nav {
   position: relative;
 }
 
-header .container {
+.page-header .container {
   border-bottom: 1px solid #fff;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .container {
+.page-header .container {
   content: "";
 }
 
-header nav .logo img {
+.page-header nav .logo img {
   height: 32px;
 }
 
-header nav .links {
+.page-header nav .links {
   display: flex;
   align-items: center;
   column-gap: 10px;
 }
 
-header nav .links .humberger-icon:hover + ul {
+.page-header nav .links .humberger-icon:hover + ul {
   display: flex;
 }
 
-header nav .links ul {
+.page-header nav .links ul {
   display: none;
   flex-direction: column;
   position: absolute;
@@ -123,7 +123,7 @@ header nav .links ul {
   width: 100%;
 }
 
-header nav .links ul li a {
+.page-header nav .links ul li a {
   display: flex;
   align-items: center;
   color: #fff;
@@ -134,13 +134,13 @@ header nav .links ul li a {
   width: 100%;
   position: relative;
 }
-header nav .links ul li:first-of-type a,
-header nav .links ul li:not(:first-of-type) a:hover {
+.page-header nav .links ul li:first-of-type a,
+.page-header nav .links ul li:not(:first-of-type) a:hover {
   color: var(--main-color);
 }
 
-header nav .links ul li:first-of-type a::before,
-header nav .links ul li:not(first-of-type) a:hover::before {
+.page-header nav .links ul li:first-of-type a::before,
+.page-header nav .links ul li:not(first-of-type) a:hover::before {
   content: "";
   position: absolute;
   left: 0;
@@ -151,16 +151,16 @@ header nav .links ul li:not(first-of-type) a:hover::before {
 }
 
 @media (min-width: 688px) {
-  header nav .links .humberger-icon {
+  .page-header nav .links .humberger-icon {
     display: none;
   }
-  header nav .links ul {
+  .page-header nav .links ul {
     display: flex;
     flex-direction: row;
     position: static;
     background-color: transparent;
   }
-  header nav .links ul li a {
+  .page-header nav .links ul li a {
     padding-inline: 10px;
     padding-block: 0;
     height: 100px;
@@ -168,12 +168,12 @@ header nav .links ul li:not(first-of-type) a:hover::before {
 }
 
 @media (min-width: 992px) {
-  header nav .links ul {
+  .page-header nav .links ul {
     column-gap: 25px;
   }
 }
 
-header nav .links .search-icon {
+.page-header nav .links .search-icon {
   border-left: 1px solid #fff;
   padding-inline: 10px 0;
 }
@@ -252,12 +252,12 @@ header nav .links .search-icon {
 }
 
 @media screen and (max-height: 500px) and (orientation: landscape) {
-  header nav .links ul li:first-of-type a::before,
-  header nav .links ul li:not(first-of-type) a:hover::before {
+  .page-header nav .links ul li:first-of-type a::before,
+  .page-header nav .links ul li:not(first-of-type) a:hover::before {
     bottom: -1px;
   }
-  header .container,
-  header nav .links ul li a {
+  .page-header .container,
+  .page-header nav .links ul li a {
     height: 70px;
   }
   #page-cover .content h2 {
@@ -713,34 +713,7 @@ Services Section Tree:
   }
 }
 
-/* Our Skills Tree 
-#our-skills
-  .container
-    .testimonials
-      .special-heading-2
-          h3
-          p
-      .users-tts
-        .user
-          .user-img
-            img
-              
-          .user-desc
-            p
-            p
-      .scrollX
-        span*3
-    .skills
-      .special-heading-2
-        h3
-        p
-    .users-skills
-      .skill-1
-        h4
-        .progress
-          span data-progress="90%">
-
-*/
+/* Our Skills */
 
 #our-skills .container {
   padding-block: var(--section-padding);
@@ -823,7 +796,7 @@ Services Section Tree:
 }
 
 #our-skills .skills .users-skills > div {
-  margin-block: 1rem;
+  margin-block: 2rem;
 }
 #our-skills .skills .users-skills div h4 {
   text-transform: uppercase;
@@ -882,4 +855,214 @@ Services Section Tree:
 
 #our-skills .skills .users-skills .skill-4 .progress span {
   width: 90%;
+}
+
+/* Quote */
+
+#quote {
+  background: url(../imgs/quote.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  color: #fff;
+  padding-block: var(--section-padding);
+  z-index: 1;
+}
+
+#quote::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color:rgb(0 0 0 / 0.7);
+  z-index: -1;
+}
+
+#quote figure {
+  text-align: center;
+}
+
+#quote figure q {
+  line-height: 1.2;
+  font-size: 2rem;
+}
+#quote figure figcaption {
+  padding-block-start: 1rem;
+}
+
+/* Pricing Section */
+
+#pricing .container {
+  padding-block: var(--section-padding);
+}
+
+#pricing .cards {
+  padding-block: calc(var(--section-padding) - 2rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 688px) {
+  #pricing .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  #pricing .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+@media (min-width: 1312px) {
+  #pricing .cards {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+#pricing .cards .card {
+  text-align: center;
+  background-color: #fcfcfc;
+  border-top: 1px solid var(--main-color);
+}
+
+#pricing .cards .card .price {
+  padding-block: 20px;
+}
+#pricing .cards .card .price > p:first-of-type {
+  text-transform: uppercase;
+  font-size: 1.35rem;
+}
+
+#pricing .cards .card .price p:last-of-type span:first-of-type { 
+  font-size: 1.4rem;
+  vertical-align: 100%;
+  font-weight: 900;
+}
+
+#pricing .cards .card .price p:last-of-type span:nth-child(2) { 
+  font-size: 4rem;
+  font-weight: 900;
+  margin-inline: .8rem;
+}
+
+#pricing .cards .card .price p:last-of-type span:last-of-type { 
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+
+#pricing .cards .card .feature {
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+#pricing .cards .card .feature p {
+  margin-inline: auto;
+  padding-block: 13px;
+  width: fit-content;
+}
+
+#pricing .cards .card .feature p:not(:last-of-type) {
+  border-bottom: 1px solid var(--main-color);
+}
+
+#pricing .cards .card footer.buy .btn {
+  margin-block: 2rem;
+  padding: 20px 30px;
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+}
+
+#pricing .contact {
+  text-align: center;
+}
+#pricing .contact p {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+#pricing .contact .btn {
+  margin-top: 20px;
+  padding: .8rem 1.5rem;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* Subscribe Section */
+/* 
+<section id="subscribe" class="sub">
+#subscribe .sub
+  .container
+    .mail
+      label
+        span
+        input
+        span{SUBSCRIBE}
+    p
+*/
+.sub {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  background: url(../imgs/subscribe.jpg) no-repeat;
+  background-size: cover;
+  background-position: center right;
+  text-align: center;
+}
+.sub .container {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--section-padding);
+  gap: 40px;
+}
+
+@media (min-width: 992px) {
+  .sub .container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.sub::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgb(0 0 0 / 0.7); 
+}
+
+.sub .mail label {
+  margin-inline: auto;
+  max-width: 500px;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  align-items: center;
+  border: 1px solid #fff;
+}
+.sub .mail label input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 1.05rem;
+  padding-block: .8rem;
+  padding-inline: 8px;
+}
+.sub .mail label input::placeholder {
+  color: #fff;
+}
+
+.sub .mail label span:first-of-type {
+  padding-inline: 10px;
+}
+.sub .mail label span:last-of-type {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: .5rem;
 }
