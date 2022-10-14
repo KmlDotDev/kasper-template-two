@@ -1066,3 +1066,134 @@ Services Section Tree:
   color: #fff;
   padding: .5rem;
 }
+
+/* contact */
+#contact .container {
+  padding-block: var(--section-padding);
+}
+
+#contact .contact {
+  padding-block: calc(var(--section-padding) - 2rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 688px) {
+  #contact .contact {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #contact .contact-form {
+    order: 1;
+  }
+  #contact .contact-info {
+    width: 50%;
+    order: 2;
+  }
+}
+
+#contact .contact-info .tel {
+  margin-bottom: 1rem;
+}
+#contact .contact-info .tel h4,#contact .contact-info .address h4 {
+  font-size: 1.1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-block-end:  1rem;
+}
+
+#contact .contact .contact-info .tel p,#contact .contact .contact-info .address address p {
+  color: #777;
+}
+
+#contact .contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+#contact .contact-form div input {
+  width: 100%;
+  font-size: 1.05rem;
+  font-weight: 100;
+  height: 60px;
+  padding-left: 15px;
+  outline: 0;
+  border: 1px solid #ccc;
+}
+
+#contact .contact-form div textarea {
+  min-width: 100%;
+  max-width: 300px;
+  max-height: 200px;
+  min-height: 200px;
+  font-size: 1.05rem;
+  padding: 15px;
+  outline: 0;
+  border: 1px solid #ccc;
+}
+
+#contact .contact-form .btn {
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 1.02rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+
+/* footer  */
+
+#footer {
+  position: relative;
+  z-index: 1;
+  background: url(../imgs/subscribe.jpg) no-repeat;
+  background-size: cover;
+}
+
+#footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+#footer .container {
+  padding-block: calc(var(--section-padding) - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  text-align: center;
+  gap: 80px;
+}
+
+#footer .container article > p {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #fff;
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: .8rem;
+  padding: 1rem;
+}
+
+#footer article .social-media i {
+ font-size: 15px;
+ padding-inline: 15px;
+ padding-block: 1rem;
+}
+#footer .copyright span {
+  color: var(--main-color);
+  font-weight: 900;
+}
