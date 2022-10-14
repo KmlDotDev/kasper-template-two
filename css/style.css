@@ -305,22 +305,7 @@ i {
 }
 
 /* Section of Services */
-/* 
-Services Section Tree:
-#services
-  .container
-    .special-heading
-      h3
-      .shape
-      p
-    article
-      .srvs.so$
-        .icon 
-          span
-        .text
-          h3
-          p
-*/
+
 
 #services .container {
   padding-block: var(--section-padding);
@@ -547,14 +532,7 @@ Services Section Tree:
   padding: 0.9rem;
 }
 
-/* Video Section Tree:
-#video
-  video
-  .content 
-    h3
-    p
-    button.btn
-*/
+/* Video Section */
 
 #video {
   position: relative;
@@ -616,19 +594,7 @@ Services Section Tree:
   }
 }
 
-/* About Us Section Tree 
-
-    #about
-      .container
-        picture 
-        .content
-            img
-          .grid
-            div
-              span.material-symbols-outlined
-              span
-              span
-*/
+/* About Us Section */
 
 #about .container {
   padding-block: var(--section-padding);
@@ -992,17 +958,7 @@ Services Section Tree:
 }
 
 /* Subscribe Section */
-/* 
-<section id="subscribe" class="sub">
-#subscribe .sub
-  .container
-    .mail
-      label
-        span
-        input
-        span{SUBSCRIBE}
-    p
-*/
+
 .sub {
   position: relative;
   z-index: 1;
@@ -1036,35 +992,36 @@ Services Section Tree:
   background-color:rgb(0 0 0 / 0.7); 
 }
 
-.sub .mail label {
+.sub .mail {
   margin-inline: auto;
-  max-width: 500px;
+  width: 100%;
   position: relative;
-  display: grid;
-  grid-template-columns: auto 2fr 1fr;
+  display: flex;
   align-items: center;
   border: 1px solid #fff;
 }
-.sub .mail label input {
+.sub .mail input {
   background-color: transparent;
   border: 0;
   outline: 0;
   color: #fff;
   font-size: 1.05rem;
   padding-block: .8rem;
-  padding-inline: 8px;
+  padding-inline: 0 8px;
+  width: 100%;
 }
-.sub .mail label input::placeholder {
+.sub .mail input::placeholder {
   color: #fff;
 }
 
-.sub .mail label span:first-of-type {
-  padding-inline: 10px;
+.sub .mail span:first-of-type {
+  padding-inline: 6px;
 }
-.sub .mail label span:last-of-type {
+.sub .mail span:last-of-type {
   background-color: var(--main-color);
   color: #fff;
   padding: .5rem;
+  margin-left: auto;
 }
 
 /* contact */
@@ -1126,8 +1083,7 @@ Services Section Tree:
 }
 
 #contact .contact-form div textarea {
-  min-width: 100%;
-  max-width: 300px;
+  max-width: 100%;
   max-height: 200px;
   min-height: 200px;
   font-size: 1.05rem;
